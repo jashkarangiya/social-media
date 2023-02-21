@@ -11,8 +11,10 @@ import morgan from "morgan";
 import path from "path";
 import { register } from "./controllers/auth.js"
 import { fileURLToPath } from "url";
-import authRoutes from "./routes/auth.js"
+import authRoutes from "./routes/auth.js";
+import userRoutes from "./routes/users.js";
 import { error } from "console";
+import { verifyToken } from "./middleware/auth.js";
 
 /* Configurations */
 const __filename = fileURLToPath(
@@ -44,10 +46,11 @@ const upload = multer({ storage });
 
 
 // Route with files
-app.post("/auth/register", upload.single("picture"), register);
+app.post("/auth/register", upload.single("picture"), verifyToken, register);
 
 // Routes 
 app.use("/auth", authRoutes);
+app.use("/users", userRoutes);
 
 /*Mongoose setup */
 const PORT = process.env.PORT || 6001;
