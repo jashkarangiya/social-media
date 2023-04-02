@@ -22,7 +22,7 @@
         "dev": "nodemon server/index.js -e js,hbs"
     },
     "keywords": [],
-    "author": "",
+    "author": "Jash Karangiya",
     "license": "ISC",
     "description": ""
 }
