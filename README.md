@@ -19,3 +19,5 @@
 - ReactJS
 
 ### Snapshots of the project:
+
+- Snapshots to be included 
