@@ -7,7 +7,7 @@
 ## Features:
 
 - Friend List
-- Dark Mode
+- Dark Mode / Light Mode
 - Add Post 
 - Add Comment
 - Adding picture as post
